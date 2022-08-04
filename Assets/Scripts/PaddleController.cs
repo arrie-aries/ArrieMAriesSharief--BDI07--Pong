@@ -38,10 +38,12 @@ public class PaddleController : MonoBehaviour
         if (Input.GetKey(moveUp))
         {
             return Vector2.up * speed;
+         
         }
         else if (Input.GetKey(moveDown))
         {
             return Vector2.down * speed;
+           
         }
 
         return Vector2.zero;
@@ -49,6 +51,7 @@ public class PaddleController : MonoBehaviour
 
     private void MoveObject(Vector2 movement)
     {
+        Debug.Log("Kecepatan Paddle: "+movement);
         rb.velocity = movement;
     }
 }

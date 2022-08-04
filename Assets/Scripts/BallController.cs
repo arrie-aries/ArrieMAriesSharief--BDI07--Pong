@@ -6,6 +6,7 @@ public class BallController : MonoBehaviour
 {
     public Vector2 speed;
     private Rigidbody2D rb;
+    public Vector2 resetPosition;
 
  
     void Start()
@@ -14,9 +15,8 @@ public class BallController : MonoBehaviour
         rb.velocity = speed;
     }
 
-  
-    void Update()
+    public void ResetBall()
     {
-        
+        transform.position = resetPosition;
     }
 }
